@@ -1,0 +1,9 @@
+Python 3.6+
+Required Python Libraries:
+paramiko (for SSH connections)
+ftplib (for FTP connections)
+requests (for HTTP Basic Authentication)
+telnetlib3 (for Telnet)
+asyncio (for async operations)
+itertools (for generating combinations)
+threading (for multi-threading)
