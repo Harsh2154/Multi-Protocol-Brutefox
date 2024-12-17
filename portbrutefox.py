@@ -9,7 +9,6 @@ import sys
 import asyncio
 import logging
 
-# Global lock for thread-safe printing
 print_lock = Lock()
 
 # Log file path
@@ -140,8 +139,24 @@ def brute_force(target_ip, user_file, password_file, delay, threads, port, proto
 
     log_message(f"[!] Brute-force attack completed.", logging.INFO)
 
+# Banner Display and Logging Start
+def display_banner():
+    banner = """
+    ****************************************
+
+    *   Multi-Protocol Brute-Force Tool    *
+
+    ****************************************
+    """
+    print(banner)
+    log_message("Brute-Force Attack Script started.", logging.INFO)
+
 # Main Function
 if __name__ == "__main__":
+    display_banner()  # Display banner at the start of the script
+
+    log_message(f"[*] Starting target verification...", logging.INFO)
+    
     print("Select the protocol to brute-force:")
     print("1. SSH\n2. FTP\n3. HTTP Basic Authentication\n4. Telnet")
     protocol_choice = input("Enter choice (1-4): ")
@@ -191,7 +206,6 @@ if __name__ == "__main__":
     log_level = logging.DEBUG if verbose_choice.lower() == 'y' else logging.INFO
     configure_logging(log_level)
 
-    log_message(f"[*] Starting target verification...", logging.INFO)
     if verify_service(target_ip, port):
         log_message(f"[+] Target verification successful. Starting {protocol.upper()} brute-force attack on port {port}...", logging.INFO)
         start_time = time.time()
