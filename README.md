@@ -30,5 +30,5 @@ Error Handling: Graceful exit and logging of errors for easier debugging.
 ```
 3. Usage: After installing the dependencies, you can run the script as follows:
 ```bash
-  python3 portbruteforx.py
+  python3 portbrutefox.py
 ```
