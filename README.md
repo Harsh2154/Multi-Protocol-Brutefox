@@ -32,3 +32,10 @@ Error Handling: Graceful exit and logging of errors for easier debugging.
 ```bash
   python3 portbrutefox.py
 ```
+## Notes:
+Ensure that you have legal authorization to conduct security testing on the target system.
+This tool is intended for educational and research purposes only. Unauthorized access to systems is illegal and unethical.
+
+## Author:
+Harsh Sandigada - @Harsh2154
+
